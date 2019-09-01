@@ -15,11 +15,17 @@ $
 
 # Command Line History (newest to oldest):
 :q
-|2,0,1567338324,,"q"
+|2,0,1567339363,,"q"
+:PluginUpdate
+|2,0,1567339351,,"PluginUpdate"
 :PluginInstall
-|2,0,1567338225,,"PluginInstall"
+|2,0,1567339340,,"PluginInstall"
 :wq
-|2,0,1567338211,,"wq"
+|2,0,1567339315,,"wq"
+:PluginList
+|2,0,1567339165,,"PluginList"
+:PluginClean
+|2,0,1567339141,,"PluginClean"
 :PluginSearch nerdtree
 |2,0,1567337715,,"PluginSearch nerdtree"
 :PluginSearch git
@@ -38,8 +44,6 @@ $
 |2,0,1567337287,,"Nerd"
 :PluginSearch
 |2,0,1567337279,,"PluginSearch"
-:PluginList
-|2,0,1567337140,,"PluginList"
 :PluginSearch nerd
 |2,0,1567337133,,"PluginSearch nerd"
 :PluginSearch Nerd
@@ -77,243 +81,255 @@ $
 |3,0,5,1,1,0,1567337905,""
 
 # File marks:
-'0  42  30  ~/.vimrc
-|4,48,42,30,1567338211,"~/.vimrc"
-'1  10  0  ~/.vim/bundle/.vundle
-|4,49,10,0,1567336476,"~/.vim/bundle/.vundle"
-'2  52  42  ~/.vimrc
-|4,50,52,42,1567335320,"~/.vimrc"
-'3  43  42  ~/.vimrc
-|4,51,43,42,1567335320,"~/.vimrc"
-'4  8  0  ~/myGit/.git
-|4,52,8,0,1567318261,"~/myGit/.git"
-'5  1  0  ~/.gitconfig
-|4,53,1,0,1567318059,"~/.gitconfig"
-'6  128  0  ~/.bashrc
-|4,54,128,0,1567312578,"~/.bashrc"
-'7  128  0  ~/.bashrc
-|4,55,128,0,1567312542,"~/.bashrc"
-'8  210  0  ~/.bashrc
-|4,56,210,0,1567311836,"~/.bashrc"
-'9  210  0  ~/.bashrc
-|4,57,210,0,1567311836,"~/.bashrc"
+'0  19  0  ~/.vimrc
+|4,48,19,0,1567339302,"~/.vimrc"
+'1  14  0  ~/.vimrc
+|4,49,14,0,1567339230,"~/.vimrc"
+'2  14  0  ~/.vimrc
+|4,50,14,0,1567339230,"~/.vimrc"
+'3  1  0  ~/myGit/.bashrc
+|4,51,1,0,1567339066,"~/myGit/.bashrc"
+'4  1  0  ~/myGit/NERD_tree_1
+|4,52,1,0,1567338592,"~/myGit/NERD_tree_1"
+'5  43  30  ~/.vimrc
+|4,53,43,30,1567338211,"~/.vimrc"
+'6  44  30  ~/.vimrc
+|4,54,44,30,1567338211,"~/.vimrc"
+'7  41  30  ~/.vimrc
+|4,55,41,30,1567338211,"~/.vimrc"
+'8  42  30  ~/.vimrc
+|4,56,42,30,1567338211,"~/.vimrc"
+'9  10  0  ~/.vim/bundle/.vundle
+|4,57,10,0,1567336476,"~/.vim/bundle/.vundle"
 
 # Jumplist (newest first):
--'  42  30  ~/.vimrc
-|4,39,42,30,1567338211,"~/.vimrc"
--'  42  30  ~/.vimrc
-|4,39,42,30,1567338211,"~/.vimrc"
--'  4  0  ~/.vimrc
-|4,39,4,0,1567338192,"~/.vimrc"
--'  4  0  ~/.vimrc
-|4,39,4,0,1567338192,"~/.vimrc"
 -'  19  0  ~/.vimrc
-|4,39,19,0,1567337910,"~/.vimrc"
+|4,39,19,0,1567339302,"~/.vimrc"
 -'  19  0  ~/.vimrc
-|4,39,19,0,1567337910,"~/.vimrc"
--'  9  146  ~/.vimrc
-|4,39,9,146,1567337568,"~/.vimrc"
--'  9  146  ~/.vimrc
-|4,39,9,146,1567337568,"~/.vimrc"
+|4,39,19,0,1567339302,"~/.vimrc"
 -'  1  0  ~/.vimrc
-|4,39,1,0,1567337551,"~/.vimrc"
+|4,39,1,0,1567339261,"~/.vimrc"
 -'  1  0  ~/.vimrc
-|4,39,1,0,1567337551,"~/.vimrc"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
--'  10  0  ~/.vim/bundle/.vundle
-|4,39,10,0,1567336476,"~/.vim/bundle/.vundle"
+|4,39,1,0,1567339261,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  14  0  ~/.vimrc
+|4,39,14,0,1567339230,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567339215,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567339215,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567339215,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1567339215,"~/.vimrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
+-'  1  0  ~/myGit/.bashrc
+|4,39,1,0,1567339066,"~/myGit/.bashrc"
 
 # History of marks within files (newest to oldest):
 
 > ~/.vimrc
-	*	1567338210	0
-	"	42	30
-	^	42	31
-	.	42	30
-	+	52	42
+	*	1567339301	0
+	"	19	0
+	^	19	0
+	.	18	0
+	+	53	42
 	+	9	31
-	+	19	0
+	+	20	0
 	+	13	27
-	+	19	0
-	+	18	0
-	+	23	0
+	+	20	0
+	+	17	0
+	+	24	0
 	+	4	0
-	+	42	30
+	+	43	30
+	+	15	0
+	+	18	0
+
+> ~/myGit/.bashrc
+	*	1567339063	0
+	"	1	0
+
+> ~/myGit/NERD_tree_1
+	*	1567338584	0
+	"	1	0
+	.	1	0
+	+	1	0
 
 > ~/.vim/bundle/.vundle/[Vundle] search
 	*	1567337207	0
