@@ -1,7 +1,6 @@
-
 #Terminal Set-up: Start using power line
 function powerline_precmd() {
-    eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -colorize-hostname -eval -modules-right  git)"
+    eval "$($GOPATH/bin/powerline-go -error $? -shell zsh -colorize-hostname  -eval -modules-right  git,ssh,time )"
 }
 
 function install_powerline_precmd() {
@@ -16,14 +15,16 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
 #Terminal Set-up: End using power line
 
 
 #Oh-my-zsh: Start
 export ZSH="/Users/khaledmosharrafmukut/.oh-my-zsh"
-plugins=(git)
-
+plugins=(git cloudapp)
+#export ZSH_THEME="powerlevel9k/powerlevel9k"
 source $ZSH/oh-my-zsh.sh
+ENABLE_CORRECTION="true"
 #Oh-my-zsh: End
 
 
@@ -48,7 +49,6 @@ export HISTFILESIZE=120000
 
 alias ls='ls -GFh'
 alias ll='ls -FGlAhp'
-#alias bash='. ~/.bash_profile'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -69,6 +69,7 @@ export PATH=$PATH:$GOROOT/bin
 
 #FOLDER MANAGEMENT: Start
 zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
+tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folder
 #FOLDER MANAGEMENT: End
 
 #   extract:  Extract most know archives with one command
@@ -77,6 +78,7 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
           case $1 in
             *.tar.bz2)   tar xjf $1     ;;
             *.tar.gz)    tar xzf $1     ;;
+            *.tar.xz)    tar Jxvf $1    ;;
             *.bz2)       bunzip2 $1     ;;
             *.rar)       unrar e $1     ;;
             *.gz)        gunzip $1      ;;
@@ -96,6 +98,7 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 
 
 #Batman: Start
+batman () { lolcat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batman_art_work |wc -l`) + 1 )) ;} 
 #cat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batman_art_work |wc -l`) + 1 ))
 #Batman: End
 
@@ -110,6 +113,7 @@ fortune | cowsay -W 70 -f turtle| lolcat
 alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
-alias batman="cat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batman_art_work |wc -l`) + 1 ))"
+
+
 
 #Experiment with alias: End
