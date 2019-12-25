@@ -1,0 +1,5 @@
+ll
+./fd2d_heat_steady.o
+chmod 777 *
+ll
+./fd2d_heat_steady.o

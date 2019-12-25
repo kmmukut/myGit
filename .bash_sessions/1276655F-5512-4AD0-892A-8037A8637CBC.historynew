@@ -1,0 +1,4 @@
+ll
+c++ fd2d_heat_steady.hpp fd2d_heat_steady.cpp 
+c++ I/fd2d_heat_steady.hpp fd2d_heat_steady.cpp 
+open *.png
