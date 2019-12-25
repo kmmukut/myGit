@@ -1,0 +1,21 @@
+cd Downloads/
+cd c-codes/
+gcc -c -I/. fd2d_heat_steady.cpp 
+cd ..
+cd f2dHeat_test/
+gcc -c -I/. fd2d_heat_steady_test.c 
+cd ..
+cd fd2dsteady/
+gcc -c -I/. fd2d_heat_steady.c
+vi fd2d_heat_steady.c
+vi fd2d_heat_steady.c
+cd ..
+cd c-codes/
+mv fd2d_heat_steady.cpp fd2d_heat_steady.c
+gcc -c -I/. fd2d_heat_steady.c
+ll
+/Users/khaledmosharrafmukut/Downloads/c-codes\ 2 ll
+ls
+cd /Users/khaledmosharrafmukut/Downloads/c-codes\ 2 
+gcc -c -I/. fd2d_heat_steady.c
+ll

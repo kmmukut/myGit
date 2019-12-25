@@ -1,0 +1,30 @@
+ssh -X hpc
+ssh -X hpc
+ssh -X hpc
+clear
+c
+l
+ll
+clear
+ll
+ls
+la
+cd Downloads/
+ll
+cd ..
+ll
+clear
+cd OneDrive\ -\ Marquette\ University/
+cd Class\ Works/l
+cd Class\ Works/
+ls
+ll
+cd Advanced\ Algorithm/
+brew update
+brew cask update
+clear
+brew cask upgrade
+brew update
+brew upgrade
+clear
+exit
