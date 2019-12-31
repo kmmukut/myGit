@@ -172,7 +172,7 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 
 c
 #Batman: Start
-#cat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batman_art_work |wc -l`) + 1 ))
+#cat ~/batman_art_work/$(( RANDOM % (`ls -1U ~/batman_art_work |wc -l`) + 1 ))
 #Batman: End
 
 #start: Random Quote
