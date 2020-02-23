@@ -72,6 +72,27 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folder
 #FOLDER MANAGEMENT: End
 
+#Youtube DL: Start
+
+youtube_format () { youtube-dl --no-check-certificate -F  "$1";}
+
+youtube_audio() {youtube-dl --no-check-certificate  -f bestaudio --audio-format mp3 -o '~/Music/youtube/%(title)s.%(ext)s' "$1"}
+
+youtube_video() {youtube-dl --no-check-certificate -f  bestvideo+bestaudio -o '~/Music/youtube_Video/%(title)s.%(ext)s' "$1"}
+
+youtube_small() {youtube-dl --ignore-errors --no-check-certificate -f  best "$1"}
+
+mp3() {youtube-dl --ignore-errors --no-check-certificate -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/Music/youtube/%(title)s.%(ext)s' "$1"}
+
+album() {youtube-dl --ignore-errors -f --no-check-certificate bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/Music/youtube/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "$1"}
+
+mp4() {youtube-dl --no-check-certificate --ignore-errors --format  "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4 -o '~/Music/youtube_Video/%(title)s.%(ext)s' "$1"}
+
+
+#Youtube DL: End
+
+
+
 #   extract:  Extract most know archives with one command
    extract () {
         if [ -f $1 ] ; then
@@ -104,11 +125,130 @@ batman () { lolcat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batma
 
 #start: Random Quote
 #artii -f small Welcome
-fortune | cowsay -W 70 -f turtle| lolcat
+#fortune | cowsay -W 70 -f turtle| lolcat
+archey
 #end: Random Quote
 
-#Experiments with alias: Start
+#Experiments with alias function: Start
 
-#Experiment with alias: End
+# Searches for text in all files in the current folder
+ftext ()
+{
+  # -i case-insensitive
+  # -I ignore binary files
+  # -H causes filename to be printed
+  # -r recursive search
+  # -n causes line number to be printed
+  # optional: -F treat search term as a literal, not a regular expression
+  # optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
+  grep -iIHrn --color=always "$1" . | less -r
+}
 
 
+#wget with resume: Start
+#alias wget = 'wget -c'
+#wget with resume: END
+
+# Copy and go to the directory
+cpg ()
+{
+  if [ -d "$2" ];then
+    cp $1 $2 && cd $2
+  else
+    cp $1 $2
+  fi
+}
+
+# Move and go to the directory
+mvg ()
+{
+  if [ -d "$2" ];then
+    mv $1 $2 && cd $2
+  else
+    mv $1 $2
+  fi
+}
+
+
+# Goes up a specified number of directories  (i.e. up 4)
+up ()
+{
+  local d=""
+  limit=$1
+  for ((i=1 ; i <= limit ; i++))
+    do
+      d=$d/..
+    done
+  d=$(echo $d | sed 's/^\///')
+  if [ -z "$d" ]; then
+    d=..
+  fi
+  cd $d
+}
+
+
+
+
+
+#Copy with progress bar using PV: Start
+
+function cpv()
+{
+  local DST=${@: -1}                    # last element
+  local SRC=( ${@: 1 : $# - 1} )        # array with rest of elements
+
+  # checks
+  type pv &>/dev/null || { echo "install pv first"; return 1; }
+  [ $# -lt 2  ]       && { echo "too few args"    ; return 1; }
+
+  # special invocation
+  function cpv_rename()
+  {
+    local SRC="$1"
+    local DST="$2"
+    local DSTDIR="$( dirname "$DST" )"
+
+    # checks
+    if   [ $# -ne 2     ]; then echo "too few args"          ; return 1; fi
+    if ! [ -e "$SRC"    ]; then echo "$SRC doesn't exist"    ; return 1; fi
+    if   [ -d "$SRC"    ]; then echo "$SRC is a dir"         ; return 1; fi
+    if ! [ -d "$DSTDIR" ]; then echo "$DSTDIR does not exist"; return 1; fi
+
+    # actual copy
+    echo -e "\n$SRC 🡺  $DST"
+    pv   "$SRC" >"$DST"
+  }
+
+  # special case for cpv_rename()
+  if ! [ -d "$DST" ]; then cpv_rename "$@"; return $?; fi;
+
+  # more checks
+  for src in "${SRC[@]}"; do 
+    local dst="$DST/$( basename "$src" )"
+    if ! [ -e "$src" ]; then echo "$src doesn't exist" ; return 1;
+    elif [ -e "$dst" ]; then echo "$dst already exists"; return 1; fi
+  done
+
+  # actual copy
+  for src in "${SRC[@]}"; do 
+    if ! [ -d "$src" ]; then 
+      local dst="$DST/$( basename "$src" )"
+      echo -e "\n$src 🡺  $dst"
+      pv "$src" > "$dst"
+    else 
+      local dir="$DST/$( basename "$src" )"
+      mkdir "$dir" || continue
+      local srcs=( $src/* )
+      cpv "${srcs[@]}" "$dir";
+    fi
+  done
+  unset cpv_rename
+}
+
+
+
+#python standalone: start
+executable () { python -m PyInstaller --onefile "$1";}
+#python standalone: stop
+
+#Copy with progress bar using PV: END
