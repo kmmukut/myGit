@@ -72,6 +72,15 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folder
 #FOLDER MANAGEMENT: End
 
+
+#Python Set Up: Start
+virtual () { python -m venv "$1";}
+#Python Set Up: End
+
+
+
+
+
 #Youtube DL: Start
 
 youtube_format () { youtube-dl --no-check-certificate -F  "$1";}
@@ -252,3 +261,16 @@ executable () { python -m PyInstaller --onefile "$1";}
 #python standalone: stop
 
 #Copy with progress bar using PV: END
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
+
