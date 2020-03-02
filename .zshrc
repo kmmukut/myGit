@@ -74,7 +74,10 @@ tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folde
 
 
 #Python Set Up: Start
-virtual () { python -m venv "$1";}
+virtual () { python3 -m venv "$1";}
+
+kernel () {virtual "$1"; source "$1"/bin/activate; pip install ipykernel;
+            python -m ipykernel install --user --name="$1";}
 #Python Set Up: End
 
 
@@ -273,4 +276,20 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 # pip zsh completion end
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
