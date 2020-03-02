@@ -446,3 +446,82 @@ cd
 ll
 zsh
 exit
+clear
+mcd test
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+clear
+zsh
+exit
+chsh
+chsh list
+chsh -l
+chsh
+clear
+lls
+cd myGit/
+ls
+ll
+ls -a
+cp -r batman* .vim* .zsh* Powerline-go/ .bash* .ssh/ .condarc .kaggle/ ~/
+cd
+ll
+la
+ls -la
+bash
+exit
+ls
+clear
+systemctl enable --now cockpit.socket 
+clear
+ls
+zsh
+exit
+vi .bash_profile 
+exit
+vi .bash_profile 
+clear
+rm .bash_profile 
+cp .bashrc .bash_profile
+nvidia-smi 
+clear
+vi .bashrc
+clear
+deactivate
+conda deactivate
+conda activate
+conda deactivate
+conda version
+conda --version
+conda update
+conda update --prefix /home/MARQNET/0806mukutk/anaconda3 anaconda
+clear
+conda activate
+ll
+clear
+conda deactivate
+cd anaconda3/
+cd libexec/
+cd ..
+cd lib
+cd ..
+cd envs/
+ls
+cd ..
+conda --list
+conda list
+clear
+ls
+cd compiler_compat/
+cd ..
+cd etc/
+cd profile.d/
+cat conda.sh 
+zsh conda.sh 
+bash conda.sh 

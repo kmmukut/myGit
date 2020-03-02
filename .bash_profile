@@ -1,4 +1,4 @@
-exec zsh
+#exec zsh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -162,14 +162,6 @@ mcd () { mkdir -p "$1" && cd "$1"; } #Makes new Dir and jumps inside
 #   extract:  End
 
 
-#Batman: Start
-#cat ~/batman/batman_art_work/$(( RANDOM % (`ls -1U ~/batman/batman_art_work |wc -l`) + 1 ))
-#Batman: End
-
-#start: Random Quote
-#artii -f small Welcome
-#fortune | cowsay -W 70 -f turtle| lolcat
-#end: Random Quote
 
 
 
@@ -201,3 +193,6 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+
+exec zsh
