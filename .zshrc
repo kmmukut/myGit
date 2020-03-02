@@ -1,14 +1,31 @@
 HISTSIZE=10000
 HISTFILESIZE=120000
+
+
+
+#Oh-my-zsh: Start
 export ZSH=$HOME/.oh-my-zsh
-
-
 #ZSH_THEME="agnoster"
-
-plugins=(git)
-
+plugins=(git zsh-completions zsh-autosuggestions)
+#export ZSH_THEME="powerlevel9k/powerlevel9k"
 source $ZSH/oh-my-zsh.sh
+ENABLE_CORRECTION="true"
+#Oh-my-zsh: End
 
+
+#Completions: start
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+autoload -Uz compinit && compinit
+
+
+#Directory help: start
+setopt  autocd autopushd 
+
+#Directory help: end
 
 #POWERLINE:start
 
@@ -113,7 +130,11 @@ export PATH=$PATH:/usr/bin/
 
 #Python Set Up: Start
 virtual () { python3 -m venv "$1";}
-alias navigator="/home/0806mukutk@marqnet.mu.edu/anaconda3/bin/anaconda-navigator"
+
+kernel () {virtual "$1"; source "$1"/bin/activate; pip install ipykernel; pip install --upgrade pip;
+            python -m ipykernel install --user --name="$1";}
+delete_kernel() {jupyter kernelspec uninstall "$1";}
+alias navigator="/home/0806mukutk/anaconda3/bin/anaconda-navigator"
 ##Python Set Up: End
 
 
@@ -132,17 +153,20 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
-# >>> conda initialize >>>
+
+
+# added by Anaconda3 5.3.1 installer
+# >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/0806mukutk@marqnet.mu.edu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/MARQNET/0806mukutk/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-        else
-                if [ -f "/home/0806mukutk@marqnet.mu.edu/anaconda3/etc/profile.d/conda.sh" ]; then
-                            . "/home/0806mukutk@marqnet.mu.edu/anaconda3/etc/profile.d/conda.sh"
-                                else
-                                            export PATH="/home/0806mukutk@marqnet.mu.edu/anaconda3/bin:$PATH"
-                                                fi
-                                                fi
-                                                unset __conda_setup
-# <<< conda initialize <<<
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/MARQNET/0806mukutk/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/MARQNET/0806mukutk/anaconda3/etc/profile.d/conda.sh"
+    else
+        \export PATH="/home/MARQNET/0806mukutk/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<

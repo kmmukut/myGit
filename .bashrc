@@ -1,3 +1,4 @@
+exec zsh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -171,20 +172,7 @@ mcd () { mkdir -p "$1" && cd "$1"; } #Makes new Dir and jumps inside
 #end: Random Quote
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/0806mukutk@marqnet.mu.edu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/0806mukutk@marqnet.mu.edu/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/0806mukutk@marqnet.mu.edu/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/0806mukutk@marqnet.mu.edu/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+
 
 
 # pip bash completion start
@@ -197,3 +185,20 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
+
+# added by Anaconda3 5.3.1 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/MARQNET/0806mukutk/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/MARQNET/0806mukutk/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/MARQNET/0806mukutk/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/MARQNET/0806mukutk/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
