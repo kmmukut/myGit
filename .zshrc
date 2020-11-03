@@ -44,6 +44,10 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced #for dark theme
 #export LSCOLORS=ExFxBxDxCxegedabagacad #for light theme
 #export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx #for black background
+#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+#export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd  #linux like
+
+
 export HISTSIZE=10000
 export HISTFILESIZE=120000
 
@@ -76,11 +80,24 @@ tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folde
 #Python Set Up: Start
 virtual () { python3 -m venv "$1";}
 
-kernel () {virtual "$1"; source "$1"/bin/activate; pip install ipykernel;
+kernel () {virtual "$1"; source "$1"/bin/activate; pip install ipykernel; pip install --upgrade pip;
             python -m ipykernel install --user --name="$1";}
+delete_kernel() {jupyter kernelspec uninstall "$1";}
 #Python Set Up: End
 
+#Mount Remote: Start
+Mount(){
+        printf "UserName:"
+        read -r user
+        printf "HostName:"
+        read -r host 
+        printf "nickName:"
+        read -r name 
+        sshfs $user@$host:./ $HOME/$name/ -ovolname=$name;
+        }
+#sshfs mukutk@hpc:/home/mukutk/ /Users/khaledmosharrafmukut/HPC -ovolname=HPC
 
+#Mount Remote: End
 
 
 
@@ -102,6 +119,11 @@ mp4() {youtube-dl --no-check-certificate --ignore-errors --format  "bestvideo+be
 
 
 #Youtube DL: End
+
+
+#compress video
+compress(){ffmpeg -i $1 -vcodec libx264 -crf 20 output_$1}
+#compress video
 
 
 
@@ -260,7 +282,7 @@ function cpv()
 
 
 #python standalone: start
-executable () { python -m PyInstaller --onefile "$1";}
+executable () { python -O -m PyInstaller --onefile "$1";}
 #python standalone: stop
 
 #Copy with progress bar using PV: END
@@ -293,3 +315,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export PATH="/usr/local/opt/texinfo/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"

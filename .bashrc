@@ -2,6 +2,8 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced #for dark theme
 #export LSCOLORS=ExFxBxDxCxegedabagacad #for light theme
+#export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+
 
 export HISTSIZE=10000
 export HISTFILESIZE=120000
