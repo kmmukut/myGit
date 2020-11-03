@@ -1,0 +1,5 @@
+file_search_maxima : append(["/Users/khaledmosharrafmukut/.maxima/mac/###.{mac,mc}"],file_search_maxima )$
+file_search_lisp : append(["/Users/khaledmosharrafmukut/.maxima/lisp/###.lisp"],file_search_lisp )$
+
+gnuplot_command:"/usr/local/bin/gnuplot"$
+draw_command:"/usr/local/bin/gnuplot"$
