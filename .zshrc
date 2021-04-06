@@ -21,7 +21,12 @@ fi
 
 #Oh-my-zsh: Start
 export ZSH="/Users/khaledmosharrafmukut/.oh-my-zsh"
-plugins=(git cloudapp)
+plugins=(
+  git
+  cloudapp
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+ )
 #export ZSH_THEME="powerlevel9k/powerlevel9k"
 source $ZSH/oh-my-zsh.sh
 ENABLE_CORRECTION="true"
@@ -117,6 +122,7 @@ album() {youtube-dl --ignore-errors -f --no-check-certificate bestaudio --extrac
 
 mp4() {youtube-dl --no-check-certificate --ignore-errors --format  "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4 -o '~/Music/youtube_Video/%(title)s.%(ext)s' "$1"}
 
+server() {youtube-dl --no-check-certificate --ignore-errors --format  "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4 -o '/Volumes/Media/%(title)s.%(ext)s' "$1"}
 
 #Youtube DL: End
 
@@ -125,6 +131,11 @@ mp4() {youtube-dl --no-check-certificate --ignore-errors --format  "bestvideo+be
 compress(){ffmpeg -i $1 -vcodec libx264 -crf 20 output_$1}
 #compress video
 
+#Git Latex
+gitHash(){git rev-parse --short $1}
+pdfDiff(){git latexdiff --latexmk  --ignore-makefile  --quiet --main main.tex  -o diff.pdf $1  $2}
+showDiffPdf(){OLD=$(gitHash $1) ; NEW=$(gitHash $2) ; pdfDiff $OLD $NEW; mv diff.pdf diff_$1_$2.pdf; open diff_$1_$2.pdf}
+#Git Latex
 
 
 #   extract:  Extract most know archives with one command
@@ -299,7 +310,6 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -318,3 +328,9 @@ unset __conda_setup
 
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/Users/khaledmosharrafmukut/.gem/ruby/2.6.0/bin:$PATH"
+
+
+
+ [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.shexport PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
