@@ -1,3 +1,10 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+
 HISTSIZE=10000
 HISTFILESIZE=120000
 
@@ -123,15 +130,22 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 #   extract:  End
 
 
+#cuda path
+export PATH=$PATH:~/.local/bin/:/usr/local/cuda-10.1/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.1/lib64
+#cuda 10.1 path
 
-export PATH=$PATH:/usr/bin/
+#lammps path
+export PATH=/home/MARQNET/0806mukutk/Desktop/LAMMPSGPU/mylammps/src:$PATH
+#lammps path
 
-
+#LIB path
+export LD_LIBRARRY_PATH=$LD_LIBRARY_PATH:/usr/lib/
 
 #Python Set Up: Start
 virtual () { python3 -m venv "$1";}
 
-kernel () {virtual "$1"; source "$1"/bin/activate; pip install ipykernel; pip install --upgrade pip;
+kernel () {virtual "$1"; source "$1"/bin/activate; pip install --upgrade pip; pip install ipykernel; 
             python -m ipykernel install --user --name="$1";}
 delete_kernel() {jupyter kernelspec uninstall "$1";}
 alias navigator="/home/0806mukutk/anaconda3/bin/anaconda-navigator"
