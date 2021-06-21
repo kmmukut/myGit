@@ -1,0 +1,23 @@
+Host lpc
+    HostName coe-lnx-2417
+    User 0806mukutk
+
+Host hpc
+    HostName coe-lnx-2392
+    User mukutk
+
+Host comet 
+    HostName comet.sdsc.xsede.org
+    User mukutk
+
+Host gpu
+    HostName coe-lnx-2273
+    User 0806mukutk
+
+Host raj
+    HostName raj
+    User 0806mukutk
+
+Host spartan
+    HostName spartan.hpc.unimelb.edu.au     
+    User mukutk

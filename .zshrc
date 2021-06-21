@@ -290,6 +290,7 @@ function cpv()
   unset cpv_rename
 }
 
+compile_omp(){/usr/local/opt/llvm/bin/clang -fopenmp -L/usr/local/opt/llvm/lib $1 -o omp_$1}
 
 
 #python standalone: start
@@ -330,7 +331,14 @@ export PATH="/usr/local/opt/texinfo/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/Users/khaledmosharrafmukut/.gem/ruby/2.6.0/bin:$PATH"
 
-
+  export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+  export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+  export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
 
  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.shexport PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+# export LDFLAGS="-L/usr/local/opt/llvm/lib"
+# export CPPFLAGS="-I/usr/local/opt/llvm/include"
+# export PATH="/usr/local/opt/llvm/bin:$PATH"
