@@ -81,6 +81,34 @@ zipf () { zip -r -X "$1".zip "$1" ; } # zipf:To create a ZIP archive of a folder
 tarf () { tar -c -f "$1".tar "$1" ; } # tarf: To create a TAR archive of a folder
 #FOLDER MANAGEMENT: End
 
+# Colorful CAT
+cat() {
+    local out colored
+    out=$(/bin/cat $@)
+    colored=$(echo $out | pygmentize -f console -g 2>/dev/null)
+    [[ -n $colored ]] && echo "$colored" || echo "$out"
+}
+# Colorful 
+
+# Colorful MAN
+
+man() {
+    env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
+# Colorful MAN
+
+
+
+
 
 #Python Set Up: Start
 virtual () { python3 -m venv "$1";}
@@ -133,7 +161,7 @@ compress(){ffmpeg -i $1 -vcodec libx264 -crf 20 output_$1}
 
 #Git Latex
 gitHash(){git rev-parse --short $1}
-pdfDiff(){git latexdiff --latexmk  --ignore-makefile  --quiet --main main.tex  -o diff.pdf $1  $2}
+pdfDiff(){git latexdiff --latexmk --ignore-latex-errors --ignore-makefile  --quiet --main main.tex  -o diff.pdf $1  $2}
 showDiffPdf(){OLD=$(gitHash $1) ; NEW=$(gitHash $2) ; pdfDiff $OLD $NEW; mv diff.pdf diff_$1_$2.pdf; open diff_$1_$2.pdf}
 #Git Latex
 
