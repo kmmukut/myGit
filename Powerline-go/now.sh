@@ -17,7 +17,7 @@ TimeColumn=61 # Default is 49 for   "   "   "   "    61 "   "   "   "
 
 # Replace location with your city name, GPS, etc. See: curl wttr.in/:help
 location=Milwaukee
-curl wttr.in/${location}?0 --silent --max-time 3 > /tmp/now-weather
+curl wttr.in/${location}?0mM --silent --max-time 3 > /tmp/now-weather
 # Timeout #. Increase for slow connection---^
 
 readarray aWeather < /tmp/now-weather

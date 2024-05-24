@@ -87,8 +87,12 @@ compress(){ffmpeg -i $1 -vcodec libx264 -crf 20 output_$1}
 #compress video
 
 # CLI Weather: Start
-getWeather(){curl wttr.in/$1}
-compareWeather(){diff -Naur <(curl -s http://wttr.in/$1 ) <(curl -s http://wttr.in/$2 )}
+getWeather(){ 
+  curl "http://wttr.in/$1?mM" 
+    }
+compareWeather(){
+  diff -Naur <(curl -s "http://wttr.in/${1}?mM" ) <(curl -s "http://wttr.in/${2}?mM" )
+     }
 # CLI Weather: End
 
 #Git Latex
@@ -121,6 +125,13 @@ showDiffPdf(){OLD=$(gitHash $1) ; NEW=$(gitHash $2) ; pdfDiff $OLD $NEW; mv diff
     }
 #   extract:  End
 
+# Kill CPU hogging process: Start
+
+kill_hog(){ 
+            sudo sh -c "echo disable > $(grep -Ev '^[ ]*0'  /sys/firmware/acpi/interrupts/gpe?? | sort --field-separator=: --key=2 --numeric --reverse | head -1 | awk -F: '{print $1}')"
+          }
+# kill CPU hogging process: Stop
+
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
@@ -152,3 +163,5 @@ unset __conda_setup
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+source /etc/zsh_command_not_found
+autoload -U compinit; compinit
