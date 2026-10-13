@@ -16,7 +16,7 @@ DateColumn=34 # Default is 27 for 80 character line, 34 for 92 character line
 TimeColumn=61 # Default is 49 for   "   "   "   "    61 "   "   "   "
 
 # Replace location with your city name, GPS, etc. See: curl wttr.in/:help
-location=Milwaukee
+location=MSP
 curl wttr.in/${location}?0mM --silent --max-time 3 > /tmp/now-weather
 # Timeout #. Increase for slow connection---^
 
@@ -78,7 +78,7 @@ while IFS= read -r Cal; do
     printf "%s" "$Cal"
     if [[ $CalLineCnt -gt 2 ]] ; then
         # See if today is on current line & invert background
-        tput cub 22
+        tput cub "${#Cal}"
         for (( j=0 ; j <= 18 ; j += 3 )) ; do
             Test=${Cal:$j:2}            # Current day on calendar line
             if [[ "$Test" == "$Today" ]] ; then
